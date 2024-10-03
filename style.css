@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background-color: #1abd9c;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-family: 'Nerko One', cursive;
+    font-size: 30px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 1s ease;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #1abd9c;
+    border-radius: 5px;
+}
+
+nav ul li .register-btn {
+    background-color: #1abd9c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+nav ul li .register-btn:hover {
+    background-color: #f4f4f4;
+    color: #1abd9c;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1abd9c;
+    color: white;
+    text-align: center;
+    padding-top: 80px; /* To avoid overlap with header */
+    position: relative;
+    overflow: hidden; /* To hide overflowing elements */
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: heartbeat 2s infinite; /* زيادة الوقت لجعل التكبير أبطأ */
+    animation: colorChange 8s infinite alternate; /* إضافة تغيير الألوان */
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: colorChangeText 8s infinite alternate; /* إضافة تغيير ألوان النص */
+}
+
+.btn-primary {
+    background-color: white;
+    color: #1abd9c;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.btn-primary:hover {
+    background-color: #f4f4f4;
+    color: #1abd9c;
+}
+
+/* About Section */
+.about {
+    padding: 30px 20px;
+    background-color: white;
+    text-align: center;
+    color: #7b003e;
+    margin-bottom: 30px; /* زودت المسافة الفارغة تحت .about */
+}
+
+.about h2 {
+    font-size: 72px;
+    margin-bottom: 10px;
+    color: #110552;
+    animation: colorChangeAbout 8s infinite alternate; /* إضافة تأثير تغيير الألوان */
+}
+
+.about p {
+    font-size: 55px;
+    max-width: 800px;
+    margin: 0 auto 120px auto; /* زودت الـ margin السفلي للنص */
+    animation: colorChangeTextAbout 8s infinite alternate; /* إضافة تغيير ألوان النص */
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: colorChangeTextFooter 8s infinite alternate; /* إضافة تأثير تغيير الألوان */
+}
+
+/* Animation for heartbeat effect */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Animation for color change */
+@keyframes colorChange {
+    0% {
+        color: #800000; /* لون داكن أول */
+    }
+    25% {
+        color: #004d00; /* لون داكن ثاني */
+    }
+    50% {
+        color: #000080; /* لون داكن ثالث */
+    }
+    75% {
+        color: #808000; /* لون داكن رابع */
+    }
+    100% {
+        color: #800080; /* لون داكن خامس */
+    }
+}
+
+/* Animation for text color change */
+@keyframes colorChangeText {
+    0% {
+        color: #000; /* لون نص داكن أول */
+    }
+    25% {
+        color: #444; /* لون نص داكن ثاني */
+    }
+    50% {
+        color: #888; /* لون نص داكن ثالث */
+    }
+    75% {
+        color: #aaa; /* لون نص داكن رابع */
+    }
+    100% {
+        color: #ccc; /* لون نص داكن خامس */
+    }
+}
+
+/* Animation for about section colors */
+@keyframes colorChangeAbout {
+    0% {
+        color: #7b003e; /* لون عن القسم أول */
+    }
+    25% {
+        color: #c70000; /* لون عن القسم ثاني */
+    }
+    50% {
+        color: #007700; /* لون عن القسم ثالث */
+    }
+    75% {
+        color: #000077; /* لون عن القسم رابع */
+    }
+    100% {
+        color: #7b007b; /* لون عن القسم خامس */
+    }
+}
+
+/* Animation for about section text color change */
+@keyframes colorChangeTextAbout {
+    0% {
+        color: #000; /* لون نص داكن أول */
+    }
+    25% {
+        color: #444; /* لون نص داكن ثاني */
+    }
+    50% {
+        color: #888; /* لون نص داكن ثالث */
+    }
+    75% {
+        color: #aaa; /* لون نص داكن رابع */
+    }
+    100% {
+        color: #ccc; /* لون نص داكن خامس */
+    }
+}
+
+/* Animation for footer text color change */
+@keyframes colorChangeTextFooter {
+    0% {
+        color: #ffffff; /* لون نص footer أول */
+    }
+    25% {
+        color: #cccccc; /* لون نص footer ثاني */
+    }
+    50% {
+        color: #999999; /* لون نص footer ثالث */
+    }
+    75% {
+        color: #777777; /* لون نص footer رابع */
+    }
+    100% {
+        color: #555555; /* لون نص footer خامس */
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .hero-text h2 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+        width: 100%; /* لتوسيع قائمة التنقل */
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%; /* لتوسيع العناصر في قائمة التنقل */
+    }
+
+    nav ul li a {
+        width: 100%; /* لجعل الروابط تأخذ عرض القائمة */
+        text-align: center; /* لجعل النص في الوسط */
+        padding: 10px 0; /* تعديل padding */
+    }
+
+    .hero {
+        padding-top: 60px; /* Reduce padding for mobile */
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .about {
+        padding: 40px 10px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+}
